@@ -12,7 +12,8 @@ def cinema_visit(
         movie: str
 ) -> None:
     customer_objects: List[Customer] = [
-        Customer(name=c["name"], food=c["food"]) for c in customers
+        Customer(customer["name"], customer["food"])
+        for customer in customers
     ]
 
     for customer in customer_objects:
